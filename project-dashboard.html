@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Performance Dashboard - Week 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .profit-table {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .profit-table td:last-child {
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Project Performance Dashboard - Week 6</h1>
+
+  <h2>Invoicing Status</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Needs Management Attention</th>
+          <th>Status</th>
+          <th>Invoice Planned</th>
+          <th>Invoice Actual</th>
+          <th>Payment Planned</th>
+          <th>Payment Actual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Contract Sign-off</td>
+          <td>No</td>
+          <td>Completed</td>
+          <td>$15,000</td>
+          <td>$15,000</td>
+          <td>2025-04-28</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Kick-off & BRDs Sign-off</td>
+          <td>No</td>
+          <td>Completed</td>
+          <td>$22,500</td>
+          <td>$22,500</td>
+          <td>2025-05-12</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>UI/UX & Workflow Sign-off</td>
+          <td>No</td>
+          <td>In Progress</td>
+          <td>$30,000</td>
+          <td>Pending</td>
+          <td>2025-06-02</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Development Completion</td>
+          <td>No</td>
+          <td>Not Started</td>
+          <td>$37,500</td>
+          <td>Pending</td>
+          <td>2025-06-23</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>UAT Sign-off</td>
+          <td>No</td>
+          <td>Not Started</td>
+          <td>$30,000</td>
+          <td>Pending</td>
+          <td>2025-07-07</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>Hypercare & Closure</td>
+          <td>No</td>
+          <td>Not Started</td>
+          <td>$15,000</td>
+          <td>Pending</td>
+          <td>2025-07-21</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Profitability Summary</h2>
+  <div class="table-container">
+    <table class="profit-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Amount / Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total Contract Value</td>
+          <td>$150,000</td>
+        </tr>
+        <tr>
+          <td>Estimated Cost to Company</td>
+          <td>$75,000</td>
+        </tr>
+        <tr>
+          <td>Revenue Recognized (to date)</td>
+          <td>$75,000</td>
+        </tr>
+        <tr>
+          <td>Cost Incurred (to date)</td>
+          <td>$40,000</td>
+        </tr>
+        <tr>
+          <td>Actual Profit (to date)</td>
+          <td>$35,000</td>
+        </tr>
+        <tr>
+          <td>Planned Profit (to date)</td>
+          <td>$46,875</td>
+        </tr>
+        <tr>
+          <td>Profit Margin Actual</td>
+          <td>46.7%</td>
+        </tr>
+        <tr>
+          <td>Profit Margin Planned</td>
+          <td>62.5%</td>
+        </tr>
+        <tr>
+          <td>Utilization (Billable vs Non-Billable)</td>
+          <td>75%</td>
+        </tr>
+        <tr>
+          <td>Invoiced to Date</td>
+          <td>$37,500</td>
+        </tr>
+        <tr>
+          <td>Payments Received</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>Outstanding Receivables</td>
+          <td>$37,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Project Schedule</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Planned Start</th>
+          <th>Actual Start</th>
+          <th>Planned End</th>
+          <th>Actual End</th>
+          <th>Planned Effort (hrs)</th>
+          <th>Actual Effort (hrs)</th>
+          <th>Planned % Complete</th>
+          <th>Actual % Complete</th>
+          <th>RAG Status</th>
+          <th>Comments / Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Requirements Gathering</td>
+          <td>2025-03-03</td>
+          <td>2025-03-03</td>
+          <td>2025-03-10</td>
+          <td>2025-03-17</td>
+          <td>40</td>
+          <td>55</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td style="color:green;">Green</td>
+          <td>Completed on time</td>
+        </tr>
+        <tr>
+          <td>Design</td>
+          <td>2025-03-10</td>
+          <td>2025-03-17</td>
+          <td>2025-03-24</td>
+          <td>--</td>
+          <td>35</td>
+          <td>20</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td style="color:orange;">Yellow</td>
+          <td>Delays due to review loops</td>
+        </tr>
+        <tr>
+          <td>Development</td>
+          <td>2025-03-24</td>
+          <td>--</td>
+          <td>2025-05-05</td>
+          <td>--</td>
+          <td>200</td>
+          <td>0</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td style="color:red;">Red</td>
+          <td>Awaiting design freeze</td>
+        </tr>
+        <tr>
+          <td>Testing & UAT</td>
+          <td>2025-05-05</td>
+          <td>--</td>
+          <td>2025-06-02</td>
+          <td>--</td>
+          <td>80</td>
+          <td>0</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td style="color:red;">Red</td>
+          <td>Shifted due to dev delay</td>
+        </tr>
+        <tr>
+          <td>Hypercare & Closure</td>
+          <td>2025-06-02</td>
+          <td>--</td>
+          <td>2025-06-16</td>
+          <td>--</td>
+          <td>30</td>
+          <td>0</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td style="color:green;">Green</td>
+          <td>On track</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>RAID Register</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Impact</th>
+          <th>Likelihood</th>
+          <th>Status</th>
+          <th>Owner</th>
+          <th>Date Identified</th>
+          <th>Mitigation / Action Plan</th>
+          <th>Target Resolution Date</th>
+          <th>Last Updated</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>R001</td>
+          <td>Risk</td>
+          <td>Design Delay</td>
+          <td>Delay in design finalization</td>
+          <td>High</td>
+          <td>Likely</td>
+          <td>Open</td>
+          <td>UX Lead</td>
+          <td>2025-04-04</td>
+          <td>Weekly checkpoints</td>
+          <td>2025-04-20</td>
+          <td>2025-04-10</td>
+          <td>Escalated to sponsor</td>
+        </tr>
+        <tr>
+          <td>A001</td>
+          <td>Assumption</td>
+          <td>API Ready</td>
+          <td>APIs will be available by Week 8</td>
+          <td>Medium</td>
+          <td>Possible</td>
+          <td>Reviewed</td>
+          <td>Tech Lead</td>
+          <td>2025-04-02</td>
+          <td>Engage vendor</td>
+          <td>2025-05-01</td>
+          <td>2025-04-08</td>
+          <td>Pending response</td>
+        </tr>
+        <tr>
+          <td>I001</td>
+          <td>Issue</td>
+          <td>Login Bug</td>
+          <td>Login fails during dev testing</td>
+          <td>High</td>
+          <td>Certain</td>
+          <td>Closed</td>
+          <td>QA Lead</td>
+          <td>2025-04-05</td>
+          <td>Hotfix deployed</td>
+          <td>2025-04-06</td>
+          <td>2025-04-07</td>
+          <td>Retested</td>
+        </tr>
+        <tr>
+          <td>D001</td>
+          <td>Dependency</td>
+          <td>Invoice API</td>
+          <td>Third-party invoice API</td>
+          <td>High</td>
+          <td>Likely</td>
+          <td>Open</td>
+          <td>PM</td>
+          <td>2025-04-01</td>
+          <td>Follow-up every week</td>
+          <td>2025-04-30</td>
+          <td>2025-04-09</td>
+          <td>Awaiting update</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Bug Report</h2>
+  <div class="table-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <canvas id="severityChart"></canvas>
+    </div>
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <canvas id="priorityChart"></canvas>
+    </div>
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <canvas id="statusChart"></canvas>
+    </div>
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <canvas id="resolutionChart"></canvas>
+    </div>
+  </div>
+
+  <h2>Avg Time to Resolve per Assignee</h2>
+  <div class="table-container" style="max-width: 700px; margin: 0 auto;">
+    <canvas id="ttrChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    new Chart(document.getElementById('ttrChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Alice', 'Bob', 'Charlie', 'Diana'],
+        datasets: [{
+          label: 'Avg TTR (days)',
+          data: [2, 3.5, 1.8, 4.2],
+          backgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: 'Average Time to Resolve (days)'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {display: true, text: 'Days'}
+          },
+          x: {
+            title: {display: true, text: 'Assignee'}
+          }
+        }
+      }
+    });
+
+    const ctxTTR = document.getElementById('ttrChart').getContext('2d');
+    new Chart(ctxTTR, {
+      type: 'bar',
+      data: {
+        labels: ['Alice', 'Bob', 'Charlie', 'Diana'],
+        datasets: [{
+          label: 'Avg TTR (days)',
+          data: [2, 3.5, 1.8, 4.2],
+          backgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: 'Average Time to Resolve (days)'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {display: true, text: 'Days'}
+          },
+          x: {
+            title: {display: true, text: 'Assignee'}
+          }
+        }
+      }
+    });
+  </script>
+  <script>
+    const pieOptions = {responsive: true, plugins: {legend: {position: 'bottom'}}};
+
+    new Chart(document.getElementById('severityChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Critical', 'High', 'Low', 'Medium'],
+        datasets: [{
+          data: [1, 4, 2, 3],
+          backgroundColor: ['#e74c3c', '#f39c12', '#2ecc71', '#3498db']
+        }]
+      },
+      options: {...pieOptions, plugins: {...pieOptions.plugins, title: {display: true, text: 'Severity Distribution'}}}
+    });
+
+    new Chart(document.getElementById('priorityChart'), {
+      type: 'pie',
+      data: {
+        labels: ['P0', 'P1', 'P2', 'P3'],
+        datasets: [{
+          data: [4, 3, 2, 1],
+          backgroundColor: ['#1abc9c', '#9b59b6', '#34495e', '#95a5a6']
+        }]
+      },
+      options: {...pieOptions, plugins: {...pieOptions.plugins, title: {display: true, text: 'Priority Distribution'}}}
+    });
+
+    new Chart(document.getElementById('statusChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Closed', 'Deferred', 'In Progress', 'Resolved'],
+        datasets: [{
+          data: [1, 4, 4, 1],
+          backgroundColor: ['#2ecc71', '#f39c12', '#3498db', '#9b59b6']
+        }]
+      },
+      options: {...pieOptions, plugins: {...pieOptions.plugins, title: {display: true, text: 'Status Distribution'}}}
+    });
+
+    new Chart(document.getElementById('resolutionChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Cannot Reproduce', 'Duplicate', 'Fixed', 'Pending'],
+        datasets: [{
+          data: [3, 2, 1, 4],
+          backgroundColor: ['#e67e22', '#e74c3c', '#1abc9c', '#9b59b6']
+        }]
+      },
+      options: {...pieOptions, plugins: {...pieOptions.plugins, title: {display: true, text: 'Resolution Distribution'}}}
+    });
+  </script>
+</body>
+
+</html>

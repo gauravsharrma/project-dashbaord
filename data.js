@@ -2,7 +2,7 @@ const projectData = {
     invoicing: {
         milestones: [
             {
-                milestone: 'Phase 1 - Requirements Gathering',
+                milestone: 'Requirements Gathering',
                 plannedInvoiceDate: '2025-01-31',
                 actualInvoiceDate: '2025-02-02',
                 plannedPaymentDate: '2025-02-28',
@@ -11,7 +11,7 @@ const projectData = {
                 paymentStatus: 'paid',
             },
             {
-                milestone: 'Phase 2 - Power Apps Portal Development',
+                milestone: 'Power Apps Portal Development',
                 plannedInvoiceDate: '2025-03-15',
                 actualInvoiceDate: '2025-03-18',
                 plannedPaymentDate: '2025-04-12',
@@ -20,7 +20,7 @@ const projectData = {
                 paymentStatus: 'pending',
             },
             {
-                milestone: 'Phase 3 - Power Automate Workflow Implementation',
+                milestone: 'Power Automate Workflow Implementation',
                 plannedInvoiceDate: '2025-04-30',
                 actualInvoiceDate: null,
                 plannedPaymentDate: '2025-05-28',
@@ -29,7 +29,7 @@ const projectData = {
                 paymentStatus: 'pending',
             },
             {
-                milestone: 'Phase 4 - Integration & Testing',
+                milestone: 'Integration & Testing',
                 plannedInvoiceDate: '2025-05-31',
                 actualInvoiceDate: null,
                 plannedPaymentDate: '2025-06-28',
@@ -38,7 +38,7 @@ const projectData = {
                 paymentStatus: 'pending',
             },
             {
-                milestone: 'Phase 5 - Deployment & Training',
+                milestone: 'Deployment & Training',
                 plannedInvoiceDate: '2025-06-30',
                 actualInvoiceDate: null,
                 plannedPaymentDate: '2025-07-28',
